@@ -26,7 +26,8 @@ public class FischTestlauf {
         fisch3.mitKiemenAtmen();
         System.out.println();
 
-
-
+        System.out.print("Anzahl an Fischen: ");
+        System.out.println(Fisch.anzahlFische());
+        
     }
 }

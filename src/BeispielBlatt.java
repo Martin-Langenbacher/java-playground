@@ -7,7 +7,7 @@ public class BeispielBlatt {
         this.wert = wert;
     }
 
-    public static  int anzahlObjekte(){
+    public static int anzahlObjekte(){
         return n;
     }
 
@@ -20,5 +20,8 @@ public class BeispielBlatt {
     }
     public void verdoppeln(){
         wert = wert * 2;
+    }
+    public void verdreifachen(){
+        wert = wert * 3;
     }
 }
