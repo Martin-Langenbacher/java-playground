@@ -4,8 +4,6 @@ public class Lachs extends Fisch implements Kiemen {
     private int groesse;
 
     // Konstruktor
-
-
     public Lachs() {
         this.name = "Lachs";
         this.groesse = 5;
