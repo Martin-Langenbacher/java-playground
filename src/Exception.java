@@ -8,6 +8,8 @@ public class Exception {
         System.out.println();
 
         ExceptionMyCode.daumenDrücken();
+        ExceptionRiskyCode objekt = new ExceptionRiskyCode("Risk1");
+        //objekt.risikoEingehen();
 
     }
 

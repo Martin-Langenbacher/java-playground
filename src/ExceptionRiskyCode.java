@@ -16,7 +16,7 @@ public class ExceptionRiskyCode {
     public void setName(String name) {
         this.name = name;
     }
-
+/*
     public void risikoEingehen() throws SchlimmeException {
 
         boolean alleHoffnungVerloren = true;
@@ -25,6 +25,8 @@ public class ExceptionRiskyCode {
             throw new SchlimmeException();
         }
     }
+
+ */
 
 
 
