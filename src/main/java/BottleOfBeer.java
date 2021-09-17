@@ -10,7 +10,7 @@ public class BottleOfBeer {
             int b = i-1;
 
             if ( i > 2 ) {
-                System.out.println("Take one down and pass it around, " + b + " bottles of beer on the wall.");
+                System.out.println("Take one down and pass it around, " + (i-1) + " bottles of beer on the wall.");
             } else {
                 System.out.println("Take one down and pass it around, " + b + " bottle of beer on the wall.");
             }

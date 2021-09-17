@@ -26,6 +26,12 @@ public class FischTestlauf {
         fisch3.mitKiemenAtmen();
         System.out.println();
 
+        Lachs fisch4 = new Lachs();
+        System.out.println("Name: " + fisch3.getName() + "; Größe: " + fisch4.getGroesse());
+        fisch3.schwimmen();
+        fisch3.mitKiemenAtmen();
+        System.out.println();
+
         System.out.print("Anzahl an Fischen: ");
         System.out.println(Fisch.anzahlFische());
         

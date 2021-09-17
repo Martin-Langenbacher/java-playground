@@ -2,6 +2,10 @@ public abstract class Fisch {
 
     private static int n = 0;
 
+    protected Fisch() {
+        n++;
+    }
+
     public static int anzahlFische(){
         return n;
     }
@@ -11,11 +15,14 @@ public abstract class Fisch {
     }
 
     // Getter & Setter
+    /*
     public static int getN() {
         return n;
     }
 
     public static void setN(int n) {
         Fisch.n = n;
-    }
+
+
+    } */
 }
