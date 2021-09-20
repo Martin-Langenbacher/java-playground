@@ -34,6 +34,22 @@ public class FischTestlauf {
 
         System.out.print("Anzahl an Fischen: ");
         System.out.println(Fisch.anzahlFische());
-        
+
+        System.out.println();
+
+        System.out.println("=====>>   Wal is 'instance of' Fisch:   <<=====");
+        if (fisch1 instanceof Fisch) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+
+        System.out.println("=====>>   Delfin (fisch2-Instanz) is 'instance of' Delfin:   <<=====");
+        if (fisch2 instanceof Delfin) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+
     }
 }

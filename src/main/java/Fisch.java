@@ -1,5 +1,12 @@
 public abstract class Fisch {
 
+    // 1. Eine abstract Class ist eine Klasse von der man keine Instanz / Object "machen" kann.
+
+    // 2. Lachs extends Fisch.
+
+    // 3. Lachs implements (Interface) Kiemen
+    //    --> darum muss der Lachs die Methode "mitKiemenAtmen()" implementieren (@Override)
+
     private static int n = 0;
 
     protected Fisch() {
