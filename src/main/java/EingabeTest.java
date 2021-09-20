@@ -44,6 +44,7 @@ public class EingabeTest {
             zahlEingeben = false;
         }
 
+
         System.out.println("Die Zahl ist: " + richtigeZahl);
         System.out.println();
         System.out.println("Mathe: " + richtigeZahl +" + 2 = " +(richtigeZahl+2));
@@ -57,6 +58,7 @@ public class EingabeTest {
         for (String token:stringArray) {
             System.out.println(token);
         }
+
 
         System.out.println("==============================================================");
         boolean stringIsNumber = false;
@@ -77,6 +79,7 @@ public class EingabeTest {
 
 
         }
+        // Mathe Aufgabe / cast
         System.out.println("==============================================================");
         System.out.println("Mathe:");
         int ergebnis = 0;
@@ -94,27 +97,15 @@ public class EingabeTest {
         // System.out.println(stringArray[0].toString());
 
 
-
-
-        // Mathe Aufgabe / cast
-
-
-
-
-        /*
-        public static boolean isNumeric(String str) {
-  try {
-    Double.parseDouble(str);
-    return true;
-  } catch(NumberFormatException e){
-    return false;
-  }
-}
-         */
-
-
+        double myDouble = 9.78d;
+        int myInt = (int) myDouble; // Manual casting: double to int
+        System.out.println("\n==============================================================");
+        System.out.println("Dies ist ein Double " + myDouble);            // Outputs 9.78
+        System.out.println("cast:");
+        System.out.println("int myInt = (int) myDouble ==>> " + myInt);   // Outputs 9
 
     }
+
 
     private static boolean checkStringifNumber(String s) {
         try {
