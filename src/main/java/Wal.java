@@ -36,4 +36,9 @@ public class Wal extends Fisch implements Saeugetier {
     public void holeLuft() {
         System.out.println("Ich hole Luft.");
     }
+
+    public void ichSpringe() {
+        System.out.println("Wale springen nicht!");
+    }
+
 }

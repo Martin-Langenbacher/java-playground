@@ -12,12 +12,14 @@ public class FischTestlauf {
         System.out.println("Name: " + fisch1.getName() + "; Größe: " + fisch1.getGroesse());
         fisch1.schwimmen();
         fisch1.holeLuft();
+        fisch1.ichSpringe();
         System.out.println();
 
         Delfin fisch2 = new Delfin(6);
         System.out.println("Name: " + fisch2.getName() + "; Größe: " + fisch2.getGroesse());
         fisch2.schwimmen();
         fisch2.holeLuft();
+        fisch2.ichSpringe();
         System.out.println();
 
         Lachs fisch3 = new Lachs();
@@ -50,6 +52,8 @@ public class FischTestlauf {
         } else {
             System.out.println(false);
         }
+
+        System.out.println("Delfin ist Säugetier? " + (fisch2 instanceof Saeugetier));
 
     }
 }

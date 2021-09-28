@@ -18,7 +18,7 @@ public abstract class Fisch {
     }
 
     public  void schwimmen() {
-        System.out.println("Fische schwimmen");
+        System.out.println("Fische schwimmen (aus der Klasse Fische).");
     }
 
     // Getter & Setter

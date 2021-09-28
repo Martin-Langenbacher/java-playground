@@ -27,11 +27,16 @@ public class Delfin extends Fisch implements Saeugetier {
     }
 
     public void schwimmen() {
+        super.schwimmen();
         System.out.println("Ich schwimme immer zusammen mit meinen Freunden.");
     }
 
     public void holeLuft() {
         System.out.println("Ich habe oben eine 'Nase'!");
+    }
+
+    public void ichSpringe() {
+        System.out.println("Delfine springen");
     }
 
 }
