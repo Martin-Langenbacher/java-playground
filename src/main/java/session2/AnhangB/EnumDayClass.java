@@ -2,11 +2,11 @@ package session2.AnhangB;
 
 import java.time.DayOfWeek;
 
-public class EnumTest {
+public class EnumDayClass {
 
     EnumKomplex.Day day;
 
-    public EnumTest(EnumKomplex.Day day) {
+    public EnumDayClass(EnumKomplex.Day day) {
         this.day = day;
     }
 
