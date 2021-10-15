@@ -1,0 +1,20 @@
+[
+  {
+    "brand": "Porsche",
+    "model": "Cayenne",
+    "price": 120000,
+    "color": "red"
+  },
+  {
+    "brand": "Porsche",
+    "model": "Cayenne",
+    "price": 130000,
+    "color": "red"
+  },
+  {
+    "brand": "Porsche",
+    "model": "Cayenne",
+    "price": 100000,
+    "color": "white"
+  }
+]
