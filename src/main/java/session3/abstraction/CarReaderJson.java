@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static java.util.Arrays.*;
@@ -18,7 +17,6 @@ public class CarReaderJson implements CarReader{
     public List<Car> readCars() {
 
         ObjectMapper mapper = new ObjectMapper();
-
         InputStream is = CarReaderJson.class.getResourceAsStream("cars.json");
 
         try {
@@ -31,23 +29,25 @@ public class CarReaderJson implements CarReader{
             throw new RuntimeException(exception);
             //exception.printStackTrace();
         }
-
     }
 
-    // Variante 1:
+
+    // Variante 1: Schleife in try: Ich füge der Carliste die einzelnen Array-Items hinzu
     private List<Car> varianteEins(ObjectMapper mapper, InputStream is) throws IOException {
         List<Car> carList = new ArrayList<>();
         // Nur ein Element wird gelesen:
         //Car cars = mapper.readValue(is, Car.class);
-        // Jackson-Methode hilft mit der readValue Methode alles einzulesen - in dem Fall ein Array
         Car[] cars = mapper.readValue(is, Car[].class);
+        // Jackson-Methode hilft mit der readValue Methode alles einzulesen - in dem Fall ein Array
+
         for (int i=0; i < cars.length; i++ ) {
             carList.add(cars[i]);
         }
         return carList;
     }
 
-    // Variante 2:
+
+    // Variante 2: --> Wir fügen der Car-Liste mit Hilfe von AddAll das convertierte CarArray hinzu
     private List<Car> varianteZwei(ObjectMapper mapper, InputStream is) throws IOException {
         // Array in Colection-Typ umwandeln:
         return new ArrayList<>(asList(mapper.readValue(is, Car[].class)));
@@ -55,8 +55,7 @@ public class CarReaderJson implements CarReader{
 
     // Erklärung: https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html
 
-    // Wir können beim instanziieren der ArrayList direkt eine gesamte Liste übergeben!
-    /*
+    /* Wir können beim instanziieren der ArrayList direkt eine gesamte Liste übergeben!
     ArrayList(Collection<? extends E> c)
     Constructs a list containing the elements of the specified collection, in the order they are returned by the collection's iterator.
     */
@@ -77,25 +76,19 @@ public class CarReaderJson implements CarReader{
         // new TypeReference<List<Car>>(){} ist eine anonyme Klasse
         System.out.println(new TypeReference<List<Car>>(){}.getType().getClass());
         return mapper.readValue(is, new TypeReference<List<Car>>(){});
+        /* Lösung von Alexander: <<===================================================================================================================================
+        String jsonString = new BufferedReader(new InputStreamReader(is)).lines().collect(Collectors.joining()); // new line
+        List<Car> listCar = mapper.readValue(jsonString, new TypeReference<List<Car>>(){}); //  return Collections.singletonList(mapper.readValue(is, Car.class));
+        return listCar;
+        ============================================================================================================================================================== */
     }
 
     // Link: https://stackoverflow.com/questions/6349421/how-to-use-jackson-to-deserialise-an-array-of-objects
 
 }
 
-// Varianten:
-/*
-
-1. Schliefe in try: Ich füge der Carliste die einzelnen Array-Items hinzu
-2. Wir fügen der Car-Liste mit hilfe von AddAll das convertierte CarArray hinzu
-3.
-
- */
-
-
-
-
-
+// Infos aus dem Internet:
+// =========================
 /*
 ObjectMapper mapper = new ObjectMapper();
 
