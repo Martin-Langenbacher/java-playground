@@ -3,8 +3,8 @@ package session4.adapter;
 public class EntenTestlauf {
 
     public static void main(String[] args) {
-        StockEnte duck = new StockEnte();
 
+        StockEnte duck = new StockEnte();
         WilderTruthahn truthahn = new WilderTruthahn();
         Ente truthahnAdapter = new TruthahnAdapter(truthahn);
 
